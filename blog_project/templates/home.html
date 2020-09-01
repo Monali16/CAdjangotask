@@ -1,0 +1,7 @@
+<h1>Blog Application Home Page</h1>
+{% if user.is_authenticated %}
+<p>Hello {{user.username}}</p>
+{% else %}
+<p><a href='{% url "login" %}'> login </a></p>
+<p><a href='{% url "signup" %}'> signup </a></p>
+{% endif %}
